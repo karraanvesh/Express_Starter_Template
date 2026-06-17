@@ -5,16 +5,28 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/server.ts",
-    "dev": "npx nodemon src/server.ts"
+    "dev": "npx nodemon src/server.ts",
+    "migrate": "sequelize-cli db:migrate",
+    "rollback": "sequelize-cli db:migrate:undo"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
+<<<<<<< HEAD
+    "axios": "^1.15.1",
     "dotenv": "^17.3.1",
+=======
+    "@prisma/client": "^7.8.0",
+>>>>>>> a5dcf68ff61d8b85c9ea0c1ceeca337fc3abef94
     "express": "^5.2.1",
-    "uuid": "^13.0.0",
+    "http-status-code": "^2.1.0",
+    "http-status-codes": "^2.3.0",
+    "mysql2": "^3.20.0",
+    "path": "^0.12.7",
+    "sequelize": "^6.37.8",
+    "uuid": "^13.0.2",
     "winston": "^3.19.0",
     "winston-daily-rotate-file": "^5.0.0",
     "zod": "^4.3.6"
@@ -22,7 +34,11 @@
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^25.5.0",
+    "@types/pathjs": "^0.8.39",
+    "dotenv": "^17.4.2",
     "nodemon": "^3.1.14",
+    "prisma": "^7.8.0",
+    "sequelize-cli": "^6.6.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
